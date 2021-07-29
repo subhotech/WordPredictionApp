@@ -1,0 +1,61 @@
+
+
+Word Prediction Application using R language and NLP methods
+========================================================
+
+Author: SS
+
+Date: 28-07-2021
+
+
+
+Overview
+========================================================
+
+The purpose of this project is using Natural language processing technique to build a Shiny applicaion to predict the next word of a piece of text input by users.In this capstone we will be applying data science in the area of natural language processing. Large databases comprising of text in a target language are commonly used when generating language models for various purposes.
+
+In this exercise, a dataset of the HC Corpora has beenused. 
+Data has been extracted from all 3 files (Twitter , Blog , News). 
+
+
+Model Building
+========================================================
+ 
+What is Ngram
+N-gram is a contiguous sequence of n items from a given sample of text or speech.The n-grams typically are collected from a text or speech corpus.
+
+Model Building
+An exploratory data analysis phase was completed.The data was sampled and cleaned by applying appropriate transformation in R. N Gram model has been built by creating unigram,bigram,trigram,quadgram repository. 
+
+A backoff model strategy was then employed to try to match a users input to common 4 word phrases. If not found, the model would backoff and look for similar 3 words phrases, and then 2 words phrases.
+
+Data Cleaning and Tokenization
+
+Cleaning and Transformation of Data 
+- remove numbers and punctuation marks,
+- remove internet links,
+- remove twitter handles and
+- remove non printable characters
+- turn all characters to lower case
+- Turning the texts into n-gram data tables 
+
+Prediction Model
+- Katz's Back-off algorithm has been used to process the N gram datasets for making prediction of next word.
+
+
+Application Deployment
+========================================================
+
+The Application has been deployed on Shiny Server where user can enter a phrase and the algorithm will predict next word. 
+The app can be access via this link: (https://subhotech.shinyapps.io/Word_Prediction_Application/) 
+
+Once user start typing on the text field , the application will display upto four possible next words. 
+
+Resources
+========================================================
+
+- [Katz's Back-off Model, Wikipedia](https://en.wikipedia.org/wiki/Katz%27s_back-off_model)
+
+- [Comprehensive R Archive Network](https://cran.r-project.org/)
+
+========================================================
